@@ -364,8 +364,8 @@ void GenerateGData()
   NewLines(1);
 
   GlobalDeclare( C );
-  C_Inline("%s * %s = & %s[%d];", C_types[real],
-            varTable[VAR]->name, varTable[C]->name, 0 );
+  // C_Inline("%s * %s = & %s[%d];", C_types[real],
+  //           varTable[VAR]->name, varTable[C]->name, 0 );
   C_Inline("%s * %s = & %s[%d];", C_types[real],
             varTable[FIX]->name, varTable[C]->name, VarNr );
 
@@ -2536,7 +2536,7 @@ void GenerateGlobalHeader()
 
   /*** Declare VAR and FIX for C with the extern property ***/
   if ( useLang == C_LANG ) {
-    C_Inline("  extern %s * %s;", C_types[real], varTable[VAR]->name );
+    // C_Inline("  extern %s * %s;", C_types[real], varTable[VAR]->name );
     C_Inline("  extern %s * %s;", C_types[real], varTable[FIX]->name );
   }
 
